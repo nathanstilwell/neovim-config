@@ -1,2 +1,2 @@
-# Lazy Vim
-lazy-lock.json
+# Packer
+/plugin/packer_compiled.lua

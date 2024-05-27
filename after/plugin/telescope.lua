@@ -1,0 +1,7 @@
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>f', builtin.find_files, { desc = "Find files" })
+vim.keymap.set('n', '<leader>g', builtin.git_files, { desc = "Find files in under source control" })
+vim.keymap.set('n', '<leader>s', function()
+  builtin.grep_string({ search = vim.fn.input("Grep > ") })
+end)
+vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = "Find existing buffers" })
