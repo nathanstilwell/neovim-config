@@ -40,13 +40,14 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 -- I don't know what it does, but I don't think I need it
 vim.keymap.set("n", "Q", "<nop>")
 
--- Todos in Markdown?
+-- Todos in Markdown
+vim.keymap.set("n", "<A-b>", "I[ ] <Esc>");
 vim.keymap.set("i", "<A-b>", "[ ] ");
-vim.keymap.set("i", "<A-s>", "<Esc>F[lrSA<space>@started <C-r>=strftime('%F %T')<CR>");
-vim.keymap.set("n", "<A-s>", "F[lrSA<Space>@started <C-r>=strftime('%F %T')<CR>");
-vim.keymap.set("i", "<A-x>", "<Esc>F[lrXf@DA<space>@done <C-r>=strftime('%F %T')<CR>");
-vim.keymap.set("n", "<A-x>", "F[lrXf@DA<space>@done <C-r>=strftime('%F %T')<CR>");
-vim.keymap.set("i", "<A-c>", "<Esc>F[lr-f@DA<space>@cancelled <C-r>=strftime('%F %T')<CR>");
-vim.keymap.set("n", "<A-c>", "F[lr-f@DA<space>@cancelled <C-r>=strftime('%F %T')<CR>");
+vim.keymap.set("n", "<A-s>", "0f[lrSA<Space>@started <C-r>=strftime('%F %T')<CR><Esc>");
+vim.keymap.set("i", "<A-s>", "<Esc>0f[lrSA<space>@started <C-r>=strftime('%F %T')<CR>");
+vim.keymap.set("n", "<A-x>", "0f[lrXf@DA<space>@done <C-r>=strftime('%F %T')<CR><Esc>");
+vim.keymap.set("i", "<A-x>", "<Esc>0f[lrXf@DA<space>@done <C-r>=strftime('%F %T')<CR>");
+vim.keymap.set("n", "<A-c>", "0f[lr-f@DA<space>@cancelled");
+vim.keymap.set("i", "<A-c>", "<Esc>0f[lr-f@DA<space>@cancelled");
 
 
