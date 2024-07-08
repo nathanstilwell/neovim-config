@@ -45,8 +45,8 @@ vim.keymap.set("n", "<A-b>", "I[ ] <Esc>");
 vim.keymap.set("i", "<A-b>", "[ ] ");
 vim.keymap.set("n", "<A-s>", "0f[lrSA<Space>@started <C-r>=strftime('%F %T')<CR><Esc>");
 vim.keymap.set("i", "<A-s>", "<Esc>0f[lrSA<space>@started <C-r>=strftime('%F %T')<CR>");
-vim.keymap.set("n", "<A-x>", "0f[lrXf@DA<space>@done <C-r>=strftime('%F %T')<CR><Esc>");
-vim.keymap.set("i", "<A-x>", "<Esc>0f[lrXf@DA<space>@done <C-r>=strftime('%F %T')<CR>");
+vim.keymap.set("n", "<A-.>", "0f[lrXf@DA<space>@done <C-r>=strftime('%F %T')<CR><Esc>");
+vim.keymap.set("i", "<A-.>", "<Esc>0f[lrXf@DA<space>@done <C-r>=strftime('%F %T')<CR>");
 vim.keymap.set("n", "<A-c>", "0f[lr-f@DA<space>@cancelled");
 vim.keymap.set("i", "<A-c>", "<Esc>0f[lr-f@DA<space>@cancelled");
 
