@@ -7,16 +7,25 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 -- file navigation
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex) --This one is from Prime, I don't know if it will work for me long term
 
-
--- buffer navigation
+--    ▄▄▄▄    █    ██   █████▒ █████▒▓█████  ██▀███
+--    ▓█████▄  ██  ▓██▒▓██   ▒▓██   ▒ ▓█   ▀ ▓██ ▒ ██▒
+--    ▒██▒ ▄██▓██  ▒██░▒████ ░▒████ ░ ▒███   ▓██ ░▄█ ▒
+--    ▒██░█▀  ▓▓█  ░██░░▓█▒  ░░▓█▒  ░ ▒▓█  ▄ ▒██▀▀█▄
+--    ░▓█  ▀█▓▒▒█████▓ ░▒█░   ░▒█░    ░▒████▒░██▓ ▒██▒
+--    ░▒▓███▀▒░▒▓▒ ▒ ▒  ▒ ░    ▒ ░    ░░ ▒░ ░░ ▒▓ ░▒▓░
+--    ▒░▒   ░ ░░▒░ ░ ░  ░      ░       ░ ░  ░  ░▒ ░ ▒░
+--    ░    ░  ░░░ ░ ░  ░ ░    ░ ░       ░     ░░   ░
+--    ░         ░                       ░  ░   ░
+--        ░
 
 -- Close buffer
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "[B]uffer [N]ext" })
 vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "[B]uffer [P]revious" })
 vim.keymap.set("n", "<leader>bc", ":bd<CR>", { desc = "[B]uffer [C]lose" })
 
+-- ~~~~~~~~~~~~~~~~~~
 -- From the Primeagen
--- =================
+-- ~~~~~~~~~~~~~~~~~~
 
 -- Move highlighted lines
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -40,7 +49,17 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 -- I don't know what it does, but I don't think I need it
 vim.keymap.set("n", "Q", "<nop>")
 
--- Todos in Markdown
+--   ▄▄▄█████▓ ▒█████  ▓█████▄  ▒█████
+--   ▓  ██▒ ▓▒▒██▒  ██▒▒██▀ ██▌▒██▒  ██▒
+--   ▒ ▓██░ ▒░▒██░  ██▒░██   █▌▒██░  ██▒
+--   ░ ▓██▓ ░ ▒██   ██░░▓█▄   ▌▒██   ██░
+--     ▒██▒ ░ ░ ████▓▒░░▒████▓ ░ ████▓▒░
+--     ▒ ░░   ░ ▒░▒░▒░  ▒▒▓  ▒ ░ ▒░▒░▒░
+--       ░      ░ ▒ ▒░  ░ ▒  ▒   ░ ▒ ▒░
+--     ░      ░ ░ ░ ▒   ░ ░  ░ ░ ░ ░ ▒
+--                ░ ░     ░        ░ ░
+--                      ░
+
 vim.keymap.set("n", "<A-b>", "I[ ] <Esc>");
 vim.keymap.set("i", "<A-b>", "[ ] ");
 vim.keymap.set("n", "<A-s>", "0f[lrSA<Space>@started <C-r>=strftime('%F %T')<CR><Esc>");
