@@ -21,7 +21,7 @@ vim.keymap.set("n", "<leader>e", vim.cmd.Ex) --This one is from Prime, I don't k
 -- Close buffer
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "[B]uffer [N]ext" })
 vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "[B]uffer [P]revious" })
-vim.keymap.set("n", "<leader>bc", ":bd<CR>", { desc = "[B]uffer [C]lose" })
+vim.keymap.set("n", "<leader>w", ":bd<CR>", { desc = "[B]uffer [C]lose" })
 
 -- ~~~~~~~~~~~~~~~~~~
 -- From the Primeagen
