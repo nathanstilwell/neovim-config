@@ -3,9 +3,6 @@ local cmp_opts = function(_, opts)
 
   opts.sources = cmp.config.sources({
     { name = 'nvim_lsp' },
-    { name = 'luasnip' },
-  }, {
-    { name = 'buffer' },
   })
 
   opts.mapping = cmp.mapping.preset.insert({
