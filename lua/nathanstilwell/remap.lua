@@ -1,3 +1,19 @@
+--          ...
+--      .xH8%"```"%.                 ..
+--      888~ xnHhx. ".              @L             ..    .     :                 .d``
+--     X88X 8**8888k `.      .u    9888i   .dL   .888: x888  x888.        u      @8Ne.   .u
+--     888X<~  `8888L !   ud8888.  `Y888k:*888. ~`8888~'888X`?888f`    us888u.   %8888:u@88N
+--     8888!   .!8*"" ` :888'8888.   888E  888I   X888  888X '888>  .@88 "8888"   `888I  888.
+--     `8888!"*888x     d888 '88%"   888E  888I   X888  888X '888>  9888  9888     888I  888I
+--      *8888  8888L    8888.+"      888E  888I   X888  888X '888>  9888  9888     888I  888I
+--     ..`888X X888X    8888L        888E  888I   X888  888X '888>  9888  9888   uW888L  888'
+--     88> %8X !8888..- '8888c. .+  x888N><888'  "*88%""*88" '888!` 9888  9888  '*88888Nu88P
+--     88   8  '8888%`   "88888%     "88"  888     `~    "    `"`   "888*""888" ~ '88888F`
+--      *=="     ""        "YP'            88F                       ^Y"   ^Y'     888 ^
+--                                        98"                                      *8E
+--                                      ./"                                        '8>
+--                                     ~`                                           "
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -32,11 +48,11 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Keep cursor in place when doing stuff
-vim.keymap.set("n", "J", "mzJ`z") -- appending a new line
+vim.keymap.set("n", "J", "mzJ`z")       -- appending a new line
 vim.keymap.set("n", "<C-d>", "<C-d>zz") -- moving viewport down
 vim.keymap.set("n", "<C-u>", "<C-u>zz") -- moving viewport up
-vim.keymap.set("n", "n", "nzzzv") -- go to next search term
-vim.keymap.set("n", "N", "Nzzzv") -- go to previous search term
+vim.keymap.set("n", "n", "nzzzv")       -- go to next search term
+vim.keymap.set("n", "N", "Nzzzv")       -- go to previous search term
 
 -- Paste without losing copy term
 vim.keymap.set("x", "<leader>p", "\"_dP")
@@ -68,5 +84,3 @@ vim.keymap.set("n", "<A-.>", "0f[lrXf@DA<space>@done <C-r>=strftime('%F %T')<CR>
 vim.keymap.set("i", "<A-.>", "<Esc>0f[lrXf@DA<space>@done <C-r>=strftime('%F %T')<CR>");
 vim.keymap.set("n", "<A-c>", "0f[lr-f@DA<space>@cancelled");
 vim.keymap.set("i", "<A-c>", "<Esc>0f[lr-f@DA<space>@cancelled");
-
-
