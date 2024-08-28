@@ -1,9 +1,23 @@
+-- ███▄ ▄███▓ ▄▄▄        ██████  ▒█████   ███▄    █
+-- ▓██▒▀█▀ ██▒▒████▄    ▒██    ▒ ▒██▒  ██▒ ██ ▀█   █
+-- ▓██    ▓██░▒██  ▀█▄  ░ ▓██▄   ▒██░  ██▒▓██  ▀█ ██▒
+-- ▒██    ▒██ ░██▄▄▄▄██   ▒   ██▒▒██   ██░▓██▒  ▐▌██▒
+-- ▒██▒   ░██▒ ▓█   ▓██▒▒██████▒▒░ ████▓▒░▒██░   ▓██░
+-- ░ ▒░   ░  ░ ▒▒   ▓▒█░▒ ▒▓▒ ▒ ░░ ▒░▒░▒░ ░ ▒░   ▒ ▒
+-- ░  ░      ░  ▒   ▒▒ ░░ ░▒  ░ ░  ░ ▒ ▒░ ░ ░░   ░ ▒░
+-- ░      ░     ░   ▒   ░  ░  ░  ░ ░ ░ ▒     ░   ░ ░
+--        ░         ░  ░      ░      ░ ░           ░
+
 return {
   { 'williamboman/mason.nvim', opts = {} },
   {
     'williamboman/mason-lspconfig.nvim',
     opts = {
-      ensure_installed = {'tsserver', 'lua_ls', 'yamlls'},
+      ensure_installed = {
+        'tsserver',
+        'lua_ls',
+        'yamlls',
+      },
       handlers = {
         function(server_name)
           require('lspconfig')[server_name].setup({})
@@ -14,6 +28,16 @@ return {
         --      yadda yadda yadda
         --  })
         -- end
+      },
+    },
+  },
+  {
+    'WhoIsSethDaniel/mason-tool-installer.nvim',
+    opts = {
+      ensure_installed = {
+        'prettier',
+        'stylua',
+        'eslint_d',
       },
     },
   },
