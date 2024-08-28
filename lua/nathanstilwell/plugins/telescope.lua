@@ -11,10 +11,11 @@
 
 return {
   {
-    "nvim-telescope/telescope.nvim", tag = "0.1.8",
-     dependencies = { "nvim-lua/plenary.nvim" },
-     -- Set up keybindings
-     keys = {
+    "nvim-telescope/telescope.nvim",
+    tag = "0.1.8",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    -- Set up keybindings
+    keys = {
       {
         "<leader>f",
         function()
@@ -37,7 +38,7 @@ return {
           require('telescope.builtin').grep_string({ search = vim.fn.input("Grep > ") })
         end,
         mode = "n",
-        desc = "Find files in git"
+        desc = "Find string in git"
       },
       {
         "<leader><leader>",
@@ -47,6 +48,6 @@ return {
         mode = "n",
         desc = "Find existing buffers"
       },
-     },
-   },
+    },
+  },
 }
