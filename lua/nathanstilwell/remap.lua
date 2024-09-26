@@ -75,7 +75,8 @@ vim.keymap.set("n", "Q", "<nop>")
 --     ░      ░ ░ ░ ▒   ░ ░  ░ ░ ░ ░ ▒
 --                ░ ░     ░        ░ ░
 --                      ░
-vim.keymap.set("n", "<leader>tb", "I󰄱 <Esc>");
-vim.keymap.set("n", "<leader>ts", "0xi󱗝<Esc>");
-vim.keymap.set("n", "<leader>td", "0xi󰱒<Esc>");
-vim.keymap.set("n", "<leader>tc", "0xi󰿦<Esc>");
+vim.keymap.set("n", "<leader>ob", "I󰄱 <Esc>");
+vim.keymap.set("n", "<leader>os", "^xi󱗝<Esc>");
+vim.keymap.set("n", "<leader>od", "^xi󰱒<Esc>");
+vim.keymap.set("n", "<leader>oc", "^xi󰿦<Esc>");
+vim.keymap.set("n", "<leader>ou", "^xi󰄱<Esc>");

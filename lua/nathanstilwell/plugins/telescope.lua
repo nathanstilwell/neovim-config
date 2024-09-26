@@ -17,7 +17,7 @@ return {
     -- Set up keybindings
     keys = {
       {
-        "<leader>f",
+        "<C-p>",
         function()
           require('telescope.builtin').find_files()
         end,
@@ -25,7 +25,7 @@ return {
         desc = "Find files",
       },
       {
-        "<leader>g",
+        "<leader>tg",
         function()
           require('telescope.builtin').git_files()
         end,
@@ -33,9 +33,25 @@ return {
         desc = "Find files in git"
       },
       {
-        "<leader>s",
+        "<leader>tgs",
         function()
-          require('telescope.builtin').grep_string({ search = vim.fn.input("Grep > ") })
+          require('telescope.builtin').git_status()
+        end,
+        mode = "n",
+        desc = "List current changes in git"
+      },
+      {
+        "<leader>tgc",
+        function()
+          require('telescope.builtin').git_commits()
+        end,
+        mode = "n",
+        desc = "Find git commits"
+      },
+      {
+        "<leader>ts",
+        function()
+          require('telescope.builtin').grep_string({ search = vim.fn.input("Grep ‣ ") })
         end,
         mode = "n",
         desc = "Find string in git"
