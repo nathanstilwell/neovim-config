@@ -17,6 +17,7 @@ return {
         'tsserver',
         'lua_ls',
         'yamlls',
+        'eslint',
       },
       handlers = {
         function(server_name)
@@ -37,7 +38,6 @@ return {
       ensure_installed = {
         'prettier',
         'stylua',
-        'eslint_d',
       },
     },
   },

@@ -44,7 +44,7 @@ local lspconfig_init = function()
 
 
   -- language server setup
-  lsp_zero.setup_servers({ 'tsserver', 'lua_ls' })
+  lsp_zero.setup_servers({ 'tsserver', 'lua_ls', 'eslint' })
 end
 
 return {
