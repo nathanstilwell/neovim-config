@@ -15,7 +15,9 @@ return {
       ensure_installed = {
         "c",
         "fish",
+        "hjson",
         "javascript",
+        "kdl",
         "lua",
         "markdown",
         "query",
