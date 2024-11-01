@@ -39,6 +39,27 @@ vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "[B]uffer [N]ext" })
 vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "[B]uffer [P]revious" })
 vim.keymap.set("n", "<leader>w", ":bd<CR>", { desc = "[B]uffer [C]lose" })
 
+--  █████   █    ██  ██▓ ▄████▄   ██ ▄█▀  █████▒██▓▒██   ██▒
+-- ▒██▓  ██▒ ██  ▓██▒▓██▒▒██▀ ▀█   ██▄█▒ ▓██   ▒▓██▒▒▒ █ █ ▒░
+-- ▒██▒  ██░▓██  ▒██░▒██▒▒▓█    ▄ ▓███▄░ ▒████ ░▒██▒░░  █   ░
+-- ░██  █▀ ░▓▓█  ░██░░██░▒▓▓▄ ▄██▒▓██ █▄ ░▓█▒  ░░██░ ░ █ █ ▒
+-- ░▒███▒█▄ ▒▒█████▓ ░██░▒ ▓███▀ ░▒██▒ █▄░▒█░   ░██░▒██▒ ▒██▒
+-- ░░ ▒▒░ ▒ ░▒▓▒ ▒ ▒ ░▓  ░ ░▒ ▒  ░▒ ▒▒ ▓▒ ▒ ░   ░▓  ▒▒ ░ ░▓ ░
+--  ░ ▒░  ░ ░░▒░ ░ ░  ▒ ░  ░  ▒   ░ ░▒ ▒░ ░      ▒ ░░░   ░▒ ░
+--    ░   ░  ░░░ ░ ░  ▒ ░░        ░ ░░ ░  ░ ░    ▒ ░ ░    ░
+--     ░       ░      ░  ░ ░      ░  ░           ░   ░    ░
+--        ░
+
+-- Quickfix
+vim.keymap.set("n", "<leader>cf", ":cfirst<CR>", { desc = "[Q]uickfix [F]irst" })
+vim.keymap.set("n", "<leader>co", ":copen<CR>", { desc = "[Q]uickfix [O]pen" })
+vim.keymap.set("n", "<leader>cc", ":ccl<CR>", { desc = "[Q]uickfix [C]lose" })
+vim.keymap.set("n", "<leader>cn", ":cn<CR>", { desc = "[Q]uickfix [N]ext" })
+vim.keymap.set("n", "<leader>cp", ":cp<CR>", { desc = "[Q]uickfix [P]revious" })
+vim.keymap.set("n", "<leader>cl", ":clast<CR>", { desc = "[Q]uickfix [L]ast" })
+vim.keymap.set("n", "<leader>c[", ":cexpr []<CR>", { desc = "[Q]uickfix Clear" })
+
+
 -- ~~~~~~~~~~~~~~~~~~
 -- From the Primeagen
 -- ~~~~~~~~~~~~~~~~~~
