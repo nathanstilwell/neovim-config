@@ -24,7 +24,7 @@ return {
         },
         servers = {
           ['lua_ls'] = { 'lua' },
-          ['tsserver'] = { 'javascript', 'typescript' },
+          ['ts_ls'] = { 'javascript', 'typescript' },
         }
       })
     end,
