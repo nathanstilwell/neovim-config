@@ -14,7 +14,8 @@ vim.filetype.add({
     -- dotfiles specific accomodations
     [".*.lua.dotfile"] = "lua",
     [".*.fish.*"] = "fish",
-    -- todo files
+    -- todo files and notes
     [".*.todo"] = "markdown",
+    [".*.md"] = "markdown",
   },
 })
