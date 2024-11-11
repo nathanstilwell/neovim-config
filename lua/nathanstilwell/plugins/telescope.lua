@@ -57,6 +57,14 @@ return {
         desc = "Find string in git"
       },
       {
+        "<leader>tq",
+        function()
+          require('telescope.builtin').quickfix()
+        end,
+        mode = "n",
+        desc = "Find quickfix",
+      },
+      {
         "<leader><leader>",
         function()
           require('telescope.builtin').buffers()
