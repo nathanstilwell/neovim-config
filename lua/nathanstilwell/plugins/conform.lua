@@ -15,8 +15,8 @@ local conform_init = function()
     formatters_by_ft = {
       javascript = { "prettier" },
       javascriptreact = { "prettier" },
-      tyepscript = { "prettier" },
-      tyepscriptreact = { "prettier" },
+      typescript = { "prettier" },
+      typescriptreact = { "prettier" },
       css = { "prettier" },
       lua = { "stylelua" }
     },
