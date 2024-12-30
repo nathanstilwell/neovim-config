@@ -3,6 +3,7 @@
 -- █▌▐█▌▄▀▀▀█▄▐▀▀▪▄▐▀▀▄     ██ ▄▄▐█ ▌▐▌▐█·▐█· ▐█▌▄▀▀▀█▄
 -- ▐█▄█▌▐█▄▪▐█▐█▄▄▌▐█•█▌    ▐███▌██ ██▌▐█▌██. ██ ▐█▄▪▐█
 --  ▀▀▀  ▀▀▀▀  ▀▀▀ .▀  ▀    ·▀▀▀ ▀▀  █▪▀▀▀▀▀▀▀▀•  ▀▀▀▀
+--  :Fig <font> <text> - Run figlet command with <font> and <text> arguments
 vim.api.nvim_create_user_command(
   'Fig',
   function(opts)
