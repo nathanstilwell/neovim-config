@@ -27,4 +27,5 @@ end
 return {
   "lewis6991/gitsigns.nvim",
   init = gitsigns_init,
+  keys = {}
 }

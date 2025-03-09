@@ -16,19 +16,12 @@ local lspconfig_init = function()
   -- if there is a language server active in the file
   local lsp_attach = function(_, bufnr)
     local o = { buffer = bufnr }
-
-    -- TODO(nathanstilwell): these keymaps need some categorization help
-    vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', o)
-    vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', o)
-    vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', o)
-    vim.keymap.set('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>', o)
-    vim.keymap.set('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>', o)
-    vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', o)
-    vim.keymap.set('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>', o)
-    vim.keymap.set('n', 'br', '<cmd>lua vim.lsp.buf.rename()<cr>', o)
-    vim.keymap.set({ 'n', 'x' }, 'bf', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', o)
-    vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', o)
-    vim.keymap.set('n', 'eo', '<cmd>lua vim.diagnostic.open_float()<cr>', o)
+    -- [INFO] Key bindings for IDE features
+    vim.keymap.set('n', '<leader>d', '<cmd>lua vim.lsp.buf.definition()<cr>', o)
+    vim.keymap.set('n', '<leader>ref', '<cmd>lua vim.lsp.buf.references()<cr>', o)
+    vim.keymap.set('n', '<leader>fs', '<cmd>lua vim.lsp.buf.signature_help()<cr>', o)
+    vim.keymap.set('n', '<leader>r', '<cmd>lua vim.lsp.buf.rename()<cr>', o)
+    vim.keymap.set('n', '<leader>eo', '<cmd>lua vim.diagnostic.open_float()<cr>', o)
 
     lsp_zero.buffer_autoformat()
   end

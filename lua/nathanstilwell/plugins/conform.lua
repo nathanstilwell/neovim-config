@@ -34,7 +34,7 @@ return {
   init = conform_init,
   keys = {
     {
-      "<leader>lf",
+      "<leader>cf",
       function()
         require("conform").format({
           lsp_fallback = true,
