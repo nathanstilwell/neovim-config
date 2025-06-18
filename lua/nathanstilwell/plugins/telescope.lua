@@ -51,7 +51,10 @@ return {
       {
         "<leader>ts",
         function()
-          require('telescope.builtin').grep_string({ search = vim.fn.input("Grep ‣ ") })
+          require('telescope.builtin').grep_string({
+            search = vim.fn.input("Grep ‣ "),
+            use_regex = true,
+          })
         end,
         mode = "n",
         desc = "Find string in git"
