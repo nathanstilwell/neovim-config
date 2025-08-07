@@ -76,5 +76,24 @@ return {
         desc = "Find existing buffers"
       },
     },
+    config = function()
+      local actions = require("telescope.actions")
+      require("telescope").setup({
+        pickers = {
+          buffers = {
+            mappings = {
+              i = {
+                -- In insert mode, map <C-d> to delete_buffer
+                ["<C-b>"] = actions.delete_buffer,
+              },
+              n = {
+                -- In normal mode, map dd to delete_buffer
+                ["dd"] = actions.delete_buffer,
+              },
+            },
+          },
+        },
+      })
+    end,
   },
 }
