@@ -13,7 +13,6 @@
 --                                        98"                                      *8E
 --                                      ./"                                        '8>
 --                                     ~`                                           "
-
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -34,10 +33,13 @@ vim.keymap.set("n", "<leader>e", vim.cmd.Ex) --This one is from Prime, I don't k
 --    ░         ░                       ░  ░   ░
 --        ░
 
--- Close buffer
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "[B]uffer [N]ext" })
 vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "[B]uffer [P]revious" })
 vim.keymap.set("n", "<leader>w", ":bd<CR>", { desc = "[B]uffer [C]lose" })
+-- This Ctrl + (+/-) is not working. Will need to find something easier
+-- vim.keymap.set("n", "<C-+>", ":resize +1<CR>", { desc = "Increase buffer size +1" })
+-- vim.keymap.set("n", "<C-->", ":resize -1<CR>", { desc = "Increase buffer size -1" })
+
 --[[
         █     █    ██ █
 ███           █    █
@@ -80,6 +82,13 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
+
+-- Copy file path of open buffer to clipboard
+-- let @" = expand("%")
+-- /Users/nathan.stilwell/.config/nvim/lua/nathanstilwell/remap.lua
+-- lua/nathanstilwell/remap.lua
+vim.keymap.set("n", "cP", "<cmd>let @+ = expand('%:p')<CR>", { desc = "Copy whole ass file path to clipboard" })
+vim.keymap.set("n", "cp", "<cmd>let @+ = expand(\"%\")<CR>", { desc = "Copy file path to clipboard" })
 
 -- I don't know what it does, but I don't think I need it
 vim.keymap.set("n", "Q", "<nop>")
