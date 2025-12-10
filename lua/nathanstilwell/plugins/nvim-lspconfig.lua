@@ -9,37 +9,35 @@
 --   ░  ░      ░           ░ ░          ░ ░           ░         ░        ░
 --                         ░
 
-local lspconfig_init = function()
-  local lsp_zero = require('lsp-zero')
-
-  -- lsp_attach is where you enable features that only work
-  -- if there is a language server active in the file
-  local lsp_attach = function(_, bufnr)
-    local o = { buffer = bufnr }
-    -- [INFO] Key bindings for IDE features
-    vim.keymap.set('n', '<leader>d', '<cmd>lua vim.lsp.buf.definition()<cr>', o)
-    vim.keymap.set('n', '<leader>ref', '<cmd>lua vim.lsp.buf.references()<cr>', o)
-    vim.keymap.set('n', '<leader>fs', '<cmd>lua vim.lsp.buf.signature_help()<cr>', o)
-    vim.keymap.set('n', '<leader>r', '<cmd>lua vim.lsp.buf.rename()<cr>', o)
-    vim.keymap.set('n', '<leader>eo', '<cmd>lua vim.diagnostic.open_float()<cr>', o)
-
-    lsp_zero.buffer_autoformat()
-  end
-
-  lsp_zero.extend_lspconfig({
-    sign_text = {
-      error = '󰚌',
-      warn = '󰈸',
-      hint = '⛥',
-      info = '†',
+local lsp_init = function()
+  vim.diagnostic.config({
+    signs = {
+      text = {
+        [vim.diagnostic.severity.ERROR] = '󰚌',
+        [vim.diagnostic.severity.WARN] = '󰈸',
+        [vim.diagnostic.severity.HINT] = '⛥',
+        [vim.diagnostic.severity.INFO] = '†',
+      },
     },
-    lsp_attach = lsp_attach,
-    capabilities = require('cmp_nvim_lsp').default_capabilities()
   })
 
+  vim.api.nvim_create_autocmd('LspAttach', {
+    desc = 'LSP actions',
+    callback = function(event)
+      local o = { buffer = event.buf }
+      vim.keymap.set('n', '<leader>d', vim.lsp.buf.definition, o)
+      vim.keymap.set('n', '<leader>ref', vim.lsp.buf.references, o)
+      vim.keymap.set('n', '<leader>fs', vim.lsp.buf.signature_help, o)
+      vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, o)
+      vim.keymap.set('n', '<leader>eo', vim.diagnostic.open_float, o)
+    end,
+  })
 
-  -- language server setup
-  lsp_zero.setup_servers({ 'ts_ls', 'lua_ls', 'eslint' })
+  vim.lsp.config('*', {
+    capabilities = require('cmp_nvim_lsp').default_capabilities(),
+  })
+
+  vim.lsp.enable({ 'ts_ls', 'lua_ls', 'eslint' })
 end
 
 return {
@@ -50,6 +48,6 @@ return {
     dependencies = {
       { 'hrsh7th/cmp-nvim-lsp' },
     },
-    init = lspconfig_init
+    init = lsp_init
   }
 }

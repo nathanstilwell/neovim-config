@@ -21,14 +21,8 @@ return {
       },
       handlers = {
         function(server_name)
-          require('lspconfig')[server_name].setup({})
+          vim.lsp.enable(server_name)
         end,
-        -- Custom handlers can go here, example
-        -- tsserver = function()
-        --  require('lspconfig').tsserver.setup({
-        --      yadda yadda yadda
-        --  })
-        -- end
       },
     },
   },
