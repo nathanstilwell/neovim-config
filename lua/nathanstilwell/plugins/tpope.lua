@@ -16,7 +16,6 @@ return {
   "tpope/vim-repeat",  -- Repeat tpope-isms
   "tpope/vim-vinegar", -- Better netrw
   "tpope/vim-jdaddy",  -- JSON manipulation, `gqaj` to format JSON
-  "github/copilot.vim",
 }
 
 
