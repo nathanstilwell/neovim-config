@@ -21,6 +21,12 @@ return {
       },
       handlers = {
         function(server_name)
+          local formatters = { 'stylua', 'prettier' }
+          for _, formatter in ipairs(formatters) do
+            if server_name == formatter then
+              return
+            end
+          end
           vim.lsp.enable(server_name)
         end,
       },

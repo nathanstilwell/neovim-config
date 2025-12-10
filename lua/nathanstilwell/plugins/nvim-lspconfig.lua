@@ -33,11 +33,16 @@ local lsp_init = function()
     end,
   })
 
+  -- Disable auto-discovery of stylua/prettier as LSP servers.
+  -- nvim-lspconfig includes configs for these formatters but they don't actually support LSP mode.
+  -- Without this, NVim tries to start them with --lsp flag which causes "exit code 2" errors.
+  -- They remain available as formatters via conform.nvim.
+  vim.lsp.config.stylua = { filetypes = {} }
+  vim.lsp.config.prettier = { filetypes = {} }
+
   vim.lsp.config('*', {
     capabilities = require('cmp_nvim_lsp').default_capabilities(),
   })
-
-  vim.lsp.enable({ 'ts_ls', 'lua_ls', 'eslint' })
 end
 
 return {
