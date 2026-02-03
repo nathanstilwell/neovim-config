@@ -14,20 +14,21 @@ return {
     'williamboman/mason-lspconfig.nvim',
     opts = {
       ensure_installed = {
+        'biome',
         'ts_ls',
         'lua_ls',
         'yamlls',
-        'eslint',
       },
       handlers = {
         function(server_name)
-          local formatters = { 'stylua', 'prettier' }
-          for _, formatter in ipairs(formatters) do
-            if server_name == formatter then
+          -- Don't set up these LSPs
+          local excluded_lsps = { 'eslint' }
+          for _, excluded in ipairs(excluded_lsps) do
+            if server_name == excluded then
               return
             end
           end
-          vim.lsp.enable(server_name)
+          require('lspconfig')[server_name].setup({})
         end,
       },
     },
@@ -36,7 +37,6 @@ return {
     'WhoIsSethDaniel/mason-tool-installer.nvim',
     opts = {
       ensure_installed = {
-        'prettier',
         'stylua',
       },
     },

@@ -30,6 +30,7 @@ local lsp_init = function()
       vim.keymap.set('n', '<leader>fs', vim.lsp.buf.signature_help, o)
       vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, o)
       vim.keymap.set('n', '<leader>eo', vim.diagnostic.open_float, o)
+      vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, o)
     end,
   })
 
