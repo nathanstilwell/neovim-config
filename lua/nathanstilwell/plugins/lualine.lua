@@ -22,7 +22,7 @@ return {
       end
 
       if #unique_linters == 0 then
-          return ""
+        return ""
       end
 
       return "󱉶 " .. table.concat(unique_linters, ", ")
@@ -33,10 +33,14 @@ return {
         theme = 'dracula',
       },
       sections = {
+        lualine_c = {
+          {
+            'filename',
+            path = 4,
+          }
+        },
         lualine_x = {
           lint_progress,
-          "encoding",
-          "fileformat",
           "filetype",
         },
       },
