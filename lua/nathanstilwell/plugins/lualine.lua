@@ -36,7 +36,7 @@ return {
         lualine_c = {
           {
             'filename',
-            path = 4,
+            path = 2,
           }
         },
         lualine_x = {

@@ -14,7 +14,6 @@ return {
     dimming = {
       alpha = 0.1,
     },
-    context = 5,
 
     -- your configuration comes here
     -- or leave it empty to use the default settings
