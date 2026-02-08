@@ -30,7 +30,7 @@ return {
 
     require("lualine").setup({
       options = {
-        theme = 'dracula',
+        theme = 'auto',
       },
       sections = {
         lualine_c = {
