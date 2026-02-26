@@ -36,9 +36,9 @@ vim.keymap.set("n", "<leader>e", vim.cmd.Ex) --This one is from Prime, I don't k
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "[B]uffer [N]ext" })
 vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "[B]uffer [P]revious" })
 vim.keymap.set("n", "<leader>w", ":close<CR>", { desc = "Buffer Close" })
--- This Ctrl + (+/-) is not working. Will need to find something easier
--- vim.keymap.set("n", "<C-+>", ":resize +1<CR>", { desc = "Increase buffer size +1" })
--- vim.keymap.set("n", "<C-->", ":resize -1<CR>", { desc = "Increase buffer size -1" })
+-- Resize splits // instead of using a remap, use the `:resize` or `:vertical resize` commands
+-- :resize [rows: number | +increment:number]
+-- :vertical resize [cols:number | +increment: nubmer]
 
 --[[
         █     █    ██ █
