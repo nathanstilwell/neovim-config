@@ -56,6 +56,9 @@ return {
   },
   config = function(_, opts)
     require("twilight").setup(opts)
-    require("twilight").enable()
+    -- The window and sunlight situation at
+    -- work have rendered twilight as a liability
+    --
+    -- require("twilight").enable()
   end,
 }
