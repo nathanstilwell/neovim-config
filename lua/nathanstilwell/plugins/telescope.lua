@@ -92,6 +92,10 @@ return {
               },
             },
           },
+          find_files = {
+            hidden = true,     -- include dotfiles
+            no_ignore = false, -- still respect .gitignore
+          },
         },
       })
     end,
