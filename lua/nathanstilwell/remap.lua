@@ -90,7 +90,7 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 vim.keymap.set("n", "cP", "<cmd>let @+ = expand('%:p')<CR>", { desc = "Copy whole ass file path to clipboard" })
 vim.keymap.set("n", "cp", "<cmd>let @+ = expand(\"%\")<CR>", { desc = "Copy file path to clipboard" })
 
--- I don't know what it does, but I don't think I need it
+-- Disable Q in normal mode to prevent accidentally entering Ex mode
 vim.keymap.set("n", "Q", "<nop>")
 
 --   ▄▄▄█████▓ ▒█████  ▓█████▄  ▒█████
