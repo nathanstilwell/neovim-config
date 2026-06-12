@@ -39,5 +39,4 @@ return {
       highlight = { enable = true, }
     },
   },
-  "nvim-treesitter/playground",
 }
