@@ -3,7 +3,19 @@
 -- █▌▐█▌▄▀▀▀█▄▐▀▀▪▄▐▀▀▄     ██ ▄▄▐█ ▌▐▌▐█·▐█· ▐█▌▄▀▀▀█▄
 -- ▐█▄█▌▐█▄▪▐█▐█▄▄▌▐█•█▌    ▐███▌██ ██▌▐█▌██. ██ ▐█▄▪▐█
 --  ▀▀▀  ▀▀▀▀  ▀▀▀ .▀  ▀    ·▀▀▀ ▀▀  █▪▀▀▀▀▀▀▀▀•  ▀▀▀▀
+--  :UpdateShit - Run Lazy, TSUpdate, and MasonUpdate
 --  :Fig <font> <text> - Run figlet command with <font> and <text> arguments
+--
+vim.api.nvim_create_user_command(
+  'UpdateShit',
+  function()
+    vim.cmd("Lazy update")
+    vim.cmd("TSUpdate")
+    vim.cmd("MasonUpdate")
+  end,
+  { desc = "Update Lazy plugins, Treesitter parsers, and Mason packages" }
+)
+
 vim.api.nvim_create_user_command(
   'Fig',
   function(opts)
