@@ -79,6 +79,11 @@ return {
     config = function()
       local actions = require("telescope.actions")
       require("telescope").setup({
+        defaults = {
+          preview = {
+            treesitter = false,
+          },
+        },
         pickers = {
           buffers = {
             mappings = {
