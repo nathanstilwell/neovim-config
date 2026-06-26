@@ -40,6 +40,9 @@ vim.opt.scrolloff = 8
 -- fast update time
 vim.opt.updatetime = 50
 
+-- Column guide
+vim.opt.colorcolumn = "120"
+
 -- Set the tab width
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
