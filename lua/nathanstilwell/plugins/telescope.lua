@@ -87,8 +87,11 @@ return {
         pickers = {
           buffers = {
             mappings = {
+              -- default mappings:
+              --    <C-d> scroll preview down
+              --    <C-u> scroll preview up
               i = {
-                -- In insert mode, map <C-d> to delete_buffer
+                -- In insert mode, map <C-b> to delete_buffer
                 ["<C-b>"] = actions.delete_buffer,
               },
               n = {
