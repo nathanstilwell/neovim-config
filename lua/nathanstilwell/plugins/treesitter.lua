@@ -16,6 +16,7 @@ return {
     end,
     opts = {
       ensure_installed = {
+        "bash",
         "c",
         "css",
         "fish",
@@ -26,6 +27,8 @@ return {
         "kdl",
         "lua",
         "markdown",
+        "markdown_inline",
+        "mermaid",
         "query",
         "toml",
         "tsx",
