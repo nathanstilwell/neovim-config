@@ -51,7 +51,8 @@ vim.keymap.set("n", "<leader>w", ":close<CR>", { desc = "Buffer Close" })
 -]]
 
 -- Quickfix
-vim.keymap.set("n", "<leader>cf", ":cfirst<CR>", { desc = "[Q]uickfix [F]irst" })
+-- NOTE: not <leader>cf -- that's taken by conform.nvim's format-file binding (see plugins/conform.lua)
+vim.keymap.set("n", "<leader>c0", ":cfirst<CR>", { desc = "[Q]uickfix First" })
 vim.keymap.set("n", "<leader>co", ":copen<CR>", { desc = "[Q]uickfix [O]pen" })
 vim.keymap.set("n", "<leader>cc", ":ccl<CR>", { desc = "[Q]uickfix [C]lose" })
 vim.keymap.set("n", "<leader>cn", ":cn<CR>", { desc = "[Q]uickfix [N]ext" })
