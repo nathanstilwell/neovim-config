@@ -11,5 +11,6 @@ require("nathanstilwell.remap")
 require("nathanstilwell.set")
 require("nathanstilwell.autocmd")
 require("nathanstilwell.usercmds")
+require("nathanstilwell.iabbrev")
 -- Install Plugins
 require("nathanstilwell.lazy")
