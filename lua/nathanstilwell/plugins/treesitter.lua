@@ -38,7 +38,18 @@ return {
     lazy = false,
     build = ":TSUpdate",
     config = function()
-      require("nvim-treesitter").install(ensure_installed)
+      -- the main branch compiles parsers with the `tree-sitter` CLI, which is
+      -- a separate install from the tree-sitter library (e.g. `brew install
+      -- tree-sitter-cli`). Without it every parser build fails and `install`
+      -- re-downloads on each startup, so skip and warn instead.
+      if vim.fn.executable("tree-sitter") == 1 then
+        require("nvim-treesitter").install(ensure_installed)
+      else
+        vim.notify(
+          "nvim-treesitter: `tree-sitter` CLI not found; install tree-sitter-cli to build parsers",
+          vim.log.levels.WARN
+        )
+      end
 
       -- main branch replaces `highlight.enable`: start highlighting per
       -- filetype ourselves. pcall guards filetypes with no parser.
