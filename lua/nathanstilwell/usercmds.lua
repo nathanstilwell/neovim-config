@@ -25,7 +25,7 @@ vim.api.nvim_create_user_command(
     local text = table.concat(vim.list_slice(fargs, 2, #fargs), " ")
 
     -- run figlet command, read output into lines
-    local handle = assert(io.popen("figlet -d ~/.local/share/figlet/fonts -w 120 -f " .. font .. " " .. text))
+    local handle = assert(io.popen("figlet -d ~/.local/share/figlet/fonts -w 200 -f " .. font .. " " .. text))
     local result = handle:lines()
     local lines = {}
     for line in result do
